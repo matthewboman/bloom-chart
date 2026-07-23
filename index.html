@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bannik Knob Bloom Dates</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <main class="page">
+    <header class="page-header">
+      <div>
+        <h1>Bannik Knob Bloom Dates</h1>
+      </div>
+
+      <div class="controls">
+        <label>
+          View
+          <select id="view-select">
+            <option value="year">By year</option>
+            <option value="flower">By flower</option>
+          </select>
+        </label>
+
+        <label id="year-control">
+          Year
+          <select id="year-select"></select>
+        </label>
+
+        <label id="flower-control" hidden>
+          Flower
+          <select id="flower-select"></select>
+        </label>
+      </div>
+    </header>
+
+    <div id="status" class="status" aria-live="polite"></div>
+    <div id="flower-view-header" class="flower-view-header" hidden>
+      <h2 id="flower-view-name"></h2>
+
+      <button id="back-to-flowers" type="button">
+        Back to all flowers
+      </button>
+    </div>
+
+    <div id="chart-header-scroll" class="chart-header-scroll">
+      <div id="chart-header"></div>
+    </div>
+
+    <section
+      id="chart-scroll"
+      class="chart-scroll"
+      aria-label="Flower bloom timeline"
+    >
+      <div id="chart"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.5.3/papaparse.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
