@@ -1,5 +1,7 @@
 const CSV_PATHS = [
   './data/2025.csv',
+  './data/2024.csv',
+  './data/2023.csv'
 ]
 
 const MONTHS = [
