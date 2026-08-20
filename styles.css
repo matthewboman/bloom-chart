@@ -42,6 +42,7 @@ body {
 }
 
 button,
+input,
 select {
   font: inherit;
 }
@@ -84,12 +85,23 @@ select {
   font-weight: 700;
 }
 
+.controls input,
 .controls select {
   min-width: 9rem;
-  padding: 0.6rem 2rem 0.6rem 0.75rem;
+  height: 2.5rem;
+  padding: 0.6rem 0.75rem;
   border: 1px solid #aeb6bf;
   border-radius: 0.4rem;
+  color: var(--text-color);
   background: #ffffff;
+}
+
+.controls select {
+  padding-right: 2rem;
+}
+
+#flower-search {
+  min-width: 15rem;
 }
 
 #flower-select {
@@ -418,6 +430,7 @@ select {
     flex-direction: column;
   }
 
+  .controls input,
   .controls select,
   #flower-select {
     width: 100%;
